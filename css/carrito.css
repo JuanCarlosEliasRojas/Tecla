@@ -59,7 +59,20 @@ img{
 footer{
 	text-align: center;
 }
-#productOrganic {
+#index{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#productos1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+#productos2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
