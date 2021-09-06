@@ -23,9 +23,6 @@ simpleCart({
 
   cartStyle: "table", //puede ser div o table
 
-  checkout: { 
-      type: "PayPal" , //Pago a través de PayPal
-      email: "tu-correo@dominio.com" //tu correo válido
-  }
+
 
 });
