@@ -29,7 +29,7 @@ $(document).ready(() => {
             crossDomain: true,
             datatype: 'json',
             success: function (response) {
-                for (var i = 0; i <= 7; i++) {
+                for (var i = 0; i <= 13; i++) {
                     var photo = response.results[i].thumbnail;
                     console.log(photo);
 
