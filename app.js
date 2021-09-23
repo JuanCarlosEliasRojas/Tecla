@@ -2,9 +2,9 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const sequileze = require('./back/db/conexion');
-const productsView = require('./back/view/productsView');
-const homeView = require('./back/view/homeView');
-const loginView = require('./back/view/loginView');
+//const productsView = require('./back/view/productsView');
+//const homeView = require('./back/view/homeView');
+//const loginView = require('./back/view/loginView');
 
 const app = express();
 
@@ -30,6 +30,6 @@ async function serverStart() {
 serverStart();
 
 //Iniciamos vistas
-productsView(app);
-homeView(app);
-loginView(app);
+//productsView(app);
+//homeView(app);
+//loginView(app);
