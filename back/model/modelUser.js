@@ -1,13 +1,12 @@
-const sequelize = require("sequelize")
+const sequelize = require("../db/conexion")
 
 module.exports = class Users{
     constructor(user){
-        this.user=user
+        this.user=user;
     }
 
-    async createUser(nombre,apellido_uno,apellido_dos,usuario,password,correo,num_celular){
-        let result = await sequelize.query("INSERT INTO users(nombre,apellido_uno,apellido_dos,usuario,password,correo,num_celular)VALUES('"+
-        nombre + "','"+apellido_uno+"','"+apellido_dos+"','"+usuario+"','"+password+"','"+correo+"','"+num_celular+"') ");
+    async createUser(usuario,nombre,primer_ap,segundo_ap,password,correo,num_cel){
+        let result = await sequelize.query("INSERT INTO  users (usuario,nombre,primer_ap,segundo_ap,password,correo,num_cel)VALUES('"+usuario+"','"+nombre+"','"+primer_ap+"','"+segundo_ap+"','"+password+"','"+correo+"','" +num_cel+"')");
         return result
     }
     async deleteUser(usuario){

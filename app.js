@@ -5,6 +5,7 @@ const sequileze = require('./back/db/conexion');
 //const productsView = require('./back/view/productsView');
 //const homeView = require('./back/view/homeView');
 //const loginView = require('./back/view/loginView');
+const userView = require('./back/view/viewUser');
 
 const app = express();
 
@@ -33,3 +34,4 @@ serverStart();
 //productsView(app);
 //homeView(app);
 //loginView(app);
+userView(app);
