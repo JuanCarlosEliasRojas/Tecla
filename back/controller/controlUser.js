@@ -6,9 +6,22 @@ module.exports.createU =async (user) =>{
 
 }
 
+module.exports.updateU = async (user) =>{
+   let usuario = new  modelUser();
+   let data = await usuario.updateUser(user);
+
+}
+
+
 module.exports.deleteU = async(usuario) =>{
-    let response = new modelUser()
+    let response = new modelUser();
     let result = await response.deleteUser(usuario)
     return result;
 
+}
+
+module.exports.readU = async() =>{
+    let response = new modelUser();
+    let result = await response.readUser();
+    return result;
 }
