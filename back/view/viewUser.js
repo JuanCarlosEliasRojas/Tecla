@@ -1,5 +1,11 @@
 const userController = require('../controller/controlUser')
 module.exports = async (app) =>{
+
+    app.get('/',(req,res) =>{
+        res.send('holis');
+    })
+
+
     app.post('/user',async(req,res) =>{
         let usuario = req.body;
         res.send(await userController.createU(usuario));
