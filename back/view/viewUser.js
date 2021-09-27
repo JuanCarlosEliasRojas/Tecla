@@ -4,14 +4,15 @@ const sequelize = require('../db/conexion');
 
 module.exports = async (app) =>{
 
-    app.get('/login',(req,res) =>{
-        res.render('login');
+    app.get('/',(req,res)=>{
+        res.send('Bienvenido al inicio')
     })
+   
 
     app.get('/index',(req,res)=>{
         res.render('index');
     })
- 
+   
     app.get('/register',(req,res)=>{
         res.render('register');
     })
@@ -25,7 +26,8 @@ module.exports = async (app) =>{
         const correo = req.body.correo;
         const num_cel = req.body.num_cel;
         sequelize.query("INSERT INTO  users (usuario,nombre,primer_ap,segundo_ap,password,correo,num_cel)VALUES('"+usuario+"','"+nombre+"','"+primer_ap+"','"+segundo_ap+"','"+password+"','"+correo+"','" +num_cel+"')")
-        res.send('registro exitoso');
+        
+        res.send('registro exitoso')
            
         
           

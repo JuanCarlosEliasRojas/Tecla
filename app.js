@@ -5,7 +5,7 @@ require('dotenv').config();
 const sequileze = require('./back/db/conexion');
 //const productsView = require('./back/view/productsView');
 //const homeView = require('./back/view/homeView');
-//const loginView = require('./back/view/loginView');
+const loginView = require('./back/view/loginView');
 const userView = require('./back/view/viewUser');
 
 
@@ -47,7 +47,7 @@ serverStart();
 //Iniciamos vistas
 //productsView(app);
 //homeView(app);
-//loginView(app);
+loginView(app);
 userView(app);
 
 
