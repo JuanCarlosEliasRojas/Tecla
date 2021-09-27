@@ -8,15 +8,27 @@ const sequileze = require('./back/db/conexion');
 //const loginView = require('./back/view/loginView');
 const userView = require('./back/view/viewUser');
 
+
 const app = express();
+const session = require('express-session');
+
+app.use(session({
+    secret:'secret',
+    resave:true,
+    saveUninitialized:true
+}));
 
 app.use(express.json())
 app.use(cors());
+app.use(express.urlencoded({extended:false}));
+
+
 
 app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 app.set('views', __dirname + '/views');
-
+app.use('/resources',express.static('public'));
+app.use('/resource',express.static(__dirname + '/public'));
 async function serverStart() {
     try {
         await sequileze.authenticate();
@@ -37,6 +49,7 @@ serverStart();
 //homeView(app);
 //loginView(app);
 userView(app);
+
 
 
 
